@@ -37,7 +37,7 @@ dots.onclick = function() {
 pause.onclick = function() {
   if(play) {
     play = false;
-    pause.innerHTML = "&#9654;";
+    pause.innerHTML = "&#9658;";
   } else {
     play = true;
     pause.innerHTML = "&#10074;&#10074;";
