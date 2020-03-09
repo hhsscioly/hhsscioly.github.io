@@ -13,7 +13,7 @@ var links = ["../","../schedule/","../pictures/"];
 var linkNames = ["Home","Schedule","Pictures"];
 var content = `
 <h1>2019-2020 Events</h1>
-<p>Each event's page includes the type, resources in Google Drive, and a PDF of the rules.</p>`;
+<p>Each event's page includes the type and a PDF of the rules.</p>`;
 var events = ["anatomy_and_physiology", "astronomy", "boomilever", "chemistry_lab", "circuit_lab", "codebusters", "designer_genes", "detector_building", "disease_detectives", "dynamic_planet", "experimental_design", "forensics", "fossils", "geologic_mapping", "gravity_vehicle", "machines", "ornithology", "ping-pong_parachute", "protein_modeling", "sounds_of_music", "water_quality", "wright_stuff", "write_it_do_it"];
 for(var x = 0; x < 23; x++) {
   content = content + `<a href="`+events[x].replace(/_/g,"-")+`.html">`;
