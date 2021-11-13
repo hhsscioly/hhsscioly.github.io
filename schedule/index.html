@@ -6,7 +6,6 @@
 <title>Schedule | Invitationals and Regionals - Calendar | HHS Science Olympiad</title>
 </head>
 <body id="bodyStuff"></body>
-<script src = "calendar-events.js"></script>
 <script>
 var title = "Schedule";
 var toRoot = "../";
@@ -15,41 +14,25 @@ var linkNames = ["Home","Events","Pictures"];
 var content = `
 <h1>Schedule</h1>
 <div width="100%" style="text-align: center;">
-<!-- <button id="switcheroo">For a different look, click here to switch it to <span id="whatIsIt">a Google Calendar</span></button><br> -->
-<iframe id="jsCalendar" src="calendar.html" style="border: 0; display: inline-block;" width="800" height="700" frameborder="0"></iframe>
-<iframe id="googleCalendar" src="https://calendar.google.com/calendar/embed?src=hhs.scio%40gmail.com&ctz=America%2FDetroit" style="border: 0; display: none;" width="800" height="600" frameborder="0"></iframe>
+<div class="calendarClass" style=" display: inline-block; width: 100%"></div>
 </div>
+<p>Please attend at least two practices Every month. There are practices every Thursday 3PM-5PM starting 11/18 until the Regional competition, excluding Thanksgiving. There are Saturday practices from 9AM-12PM on 11/13, 11/20, 12/4, 1/8, and 1/15</p>
 <div id="schedule"></div>
 `;
 </script>
 <script src="../resources/builder.js"></script>
+<script src="calendar-events.js"></script>
 <script>
-  //generate schedule from calendar-events.js
   var date = new Date();
   var eventsSchedule = "<table>\n<tbody>";
   for(var x = 0; x < events.length; x++) {
-    eDate = new Date(events[x][0].replace(/-/g,"/"));
-    if(events[x][2] && (date.getTime() - eDate.getTime()) / 864e5 < 90) {
+    var eDate = new Date(events[x][0].replace(/-/g,"/"));
+    if(events[x][2] == "0" && (date.getTime() - eDate.getTime()) / 864e5 < 90) {
       eventsSchedule = eventsSchedule + "<tr><td style='padding: 1em;'><b>" + events[x][0] + "</b></td><td>" + events[x][1] + "</td></tr>";
     }
   }
   eventsSchedule = eventsSchedule + "</tbody>\n</table>";
-  schedule.innerHTML = eventsSchedule;
-
-  //switch between js calendar and google calendar widget on button click
-  var jsCal = true;
-  switcheroo.onclick = function() {
-    if(jsCal) {
-      jsCal = false;
-      jsCalendar.style.display = "none";
-      googleCalendar.style.display = "inline-block";
-      whatIsIt.innerHTML = "a javascript calendar";
-    } else {
-      jsCal = true;
-      jsCalendar.style.display = "inline-block";
-      googleCalendar.style.display = "none";
-      whatIsIt.innerHTML = "a Google Calendar";
-    }
-  }
-  </script>
+  document.getElementById("schedule").innerHTML = eventsSchedule;
+</script>
+<script src="calendar-script.js"></script>
 </html>
