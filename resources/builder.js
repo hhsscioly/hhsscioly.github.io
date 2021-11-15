@@ -2,7 +2,7 @@ document.head.innerHTML +=
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="charset" content="UTF-8">
 <link rel="stylesheet" href="`+toRoot+`resources/style.css">
-<link rel="shortcut icon" href="`+toRoot+`resources/icon.ICO" type="image/x-icon">
+<link rel="shortcut icon" href="`+toRoot+`resources/icon.ico" type="image/x-icon">
 `;
 var body =
 `<header style="background-color: #0B1692;">
@@ -14,28 +14,32 @@ var body =
 </td>
 </tr>
 <tr>
-<td class="pagetitle" colspan="2" width="50%"><a>`+title+`</a></td>
-<td style="text-align: right;" colspan="2">
-<div class="headlink">`;
+<td class="pagetitle" colspan="2" width="50%" style="vertical-align: bottom"><a>`+title+`</a></td>
+<td style="text-align: right; vertical-align: bottom" colspan="2">
+<div class="headlink" style="vertical-align: bottom">`;
 for(var x = 0; x < links.length; x++) {
   body = body + `<a href="`+links[x]+`">`+linkNames[x]+`</a>`;
 }
 body = body + `
 </div>
-<div class="dropNav">
-<a id="dropButton">&#8801;</a>
-</div>
-</td>
-</tr>
-</table>
-</header>
-<div class="dropNavButton">
-<div id="dropLinks">`;
+<div class="dropNav" style="vertical-align: bottom">
+<a id="dropButton" style="vertical-align: bottom">&#8801;</a>
+<div class="dropNavButton" style="vertical-align: bottom">
+<div id="dropLinks" style="vertical-align: bottom">`;
 for(var x = 0; x < links.length; x++) {
   body = body + `<a href="`+links[x]+`">`+linkNames[x]+`</a><br>\n`;
 }
 body = body + `</div>
 </div>
+
+</div>
+</td>
+</tr>
+</table>
+</header>
+
+
+
 <div style="padding: 1em;">`+content+`</div>`;
 document.body.innerHTML = body;
 var showDropLinks = false;
