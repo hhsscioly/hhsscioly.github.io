@@ -131,7 +131,12 @@ table, td {
   width: 100%;
   text-align: right;
   position: absolute;
+  right: 11.5em;
+  bottom: 27.3em;
   text-align: right;
+}
+.dropNav a {
+  height: 100%;
 }
 .dropButton {
   text-align: right;
@@ -141,6 +146,7 @@ table, td {
 }
 .dropNav, .dropNavButton {
   display: none;
+  vertical-align: bottom;
 }
 img {
   max-width: 100%;
