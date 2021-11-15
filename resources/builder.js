@@ -2,7 +2,7 @@ document.head.innerHTML +=
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="charset" content="UTF-8">
 <link rel="stylesheet" href="`+toRoot+`resources/style.css">
-<link rel="shortcut icon" href="`+toRoot+`resources/icon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="`+toRoot+`resources/icon.ICO" type="image/x-icon">
 `;
 var body =
 `<header style="background-color: #0B1692;">
