@@ -1,6 +1,6 @@
-headStuff.innerHTML = headStuff.innerHTML +
+document.head.innerHTML +=
 `<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="charset" content="utf-8">
+<meta name="charset" content="UTF-8">
 <link rel="stylesheet" href="`+toRoot+`resources/style.css">
 <link rel="shortcut icon" href="`+toRoot+`resources/icon.ico" type="image/x-icon">
 `;
@@ -8,7 +8,7 @@ var body =
 `<header style="background-color: #0B1692;">
 <table width="100%">
 <tr>
-<td width="10%"><a href="http://www.hassk12.org" target="_blank"><img src="`+toRoot+`resources/saxons.png"></a></td>
+<td width="10%"><a href="http://www.hassk12.org" target="_blank"><img src="`+toRoot+`resources/saxons.png" style="max-height: 1000% !important"></a></td>
 <td colspan="3">
 <h1 style="color: gold;">Hastings High School<br>Science Olympiad</h1>
 </td>
@@ -37,7 +37,7 @@ for(var x = 0; x < links.length; x++) {
 body = body + `</div>
 </div>
 <div style="padding: 1em;">`+content+`</div>`;
-bodyStuff.innerHTML = body;
+document.body.innerHTML = body;
 var showDropLinks = false;
 dropButton.onclick = function() {
   if(showDropLinks) {
