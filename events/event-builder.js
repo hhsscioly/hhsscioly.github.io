@@ -44,9 +44,9 @@ content = `
 <table>
 <tbody>
 <tr>
-<td height="40px" style="text-align: center; padding: 10px;">
+<td class="listTable" height="40px" style="text-align: center; padding: 10px;">
 <img style="display: inline-block" src="../` + category.toLowerCase() + `-logo.png"></td>
-<td style="height:2em; font-size: 1.8em;">`+ category + ` Event</td>
+<td class="listTable" style="height:2em; font-size: 1.8em;">`+ category + ` Event</td>
 </tr>
 </tbody>
 </table>
@@ -60,31 +60,31 @@ content = content + `
 <table>
 <tbody>
 <tr>
-<td height="40px" style="text-align: center; padding: 10px;">
+<td class="listTable" height="40px" style="text-align: center; padding: 10px;">
 <a href="https://www.soinc.org/`+name.toLowerCase().replace("of-","")+`-c">
 <img style="display: inline-block;" src="../../resources/soinc-logo.jpg">
 </a></td>
-<td style="height:2em; font-size: 1.8em;">
+<td class="listTable" style="height:2em; font-size: 1.8em;">
 <a href="https://www.soinc.org/`+name.toLowerCase().replace("of-","")+`-c">
 Official Science Olympiad page for this event
 </a></td>
 </tr>
 <tr>
-<td height="40px" style="text-align: center; padding: 10px;">
+<td class="listTable" height="40px" style="text-align: center; padding: 10px;">
 <a href="https://scioly.org/wiki/index.php/`+name.replace(/-/g,"_")+`">
 <img style="display: inline-block;" src="../../resources/scioly-logo.png">
 </a></td>
-<td style="height:2em; font-size: 1.8em;">
+<td class="listTable" style="height:2em; font-size: 1.8em;">
 <a href="https://scioly.org/wiki/index.php/`+name.replace(/-/g,"_")+`">
 Science Olympiad Student Center page for this event
 </a></td>
 </tr>
 <tr>
-<td height="40px" style="text-align: center; padding: 10px;">
+<td class="listTable" height="40px" style="text-align: center; padding: 10px;">
 <a href="https://drive.google.com/open?id=`+resourceId+`">
 <img style="display: inline-block; max-height: 100%;" src="../../resources/drive-logo.png">
 </a></td>
-<td style="height:2em; font-size: 1.8em;">
+<td class="listTable" style="height:2em; font-size: 1.8em;">
 <a href="https://drive.google.com/open?id=`+resourceId+`">
 Google Drive Shared Resources
 </a></td>
@@ -95,11 +95,7 @@ Google Drive Shared Resources
 
 document.head.innerHTML += `
 <style>
-td {
-  height: 3em;
-  vertical-align: text-middle;
-}
-td img {
+.listTable img {
   max-height: 80%;
 }
 </style>
