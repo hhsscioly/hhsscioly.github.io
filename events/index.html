@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="The event list for this Science Olympiad season. There are 23 events, including build and test events.">
+<meta name="author" content="Matthew Pattok">
+<title>Events | HHS Science Olympiad</title>
+<style>
+table, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 25em;
+}
+
+th {
+  height: 1.4em;
+}
+
+td {
+  height: 1.7em;
+  vertical-align: text-middle;
+  padding: 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+</style>
+</head>
+<body></body>
+<script src="event-list.js"></script>
+<script>
+var title = "Events";
+var toRoot = "../";
+var links = ["../","../schedule/","../pictures/"];
+var linkNames = ["Home","Schedule","Pictures"];
+var content = `
+<h1>2021-2022 Events</h1>
+<p><a href="./rules/">All Rules</a><br><br>
+Each event's page includes basic information, the rules, and some resources.</p>
+<div style="margin-left:10%">
+`;
+for(var i = 0; i < types.length; i++) {
+  content += `<table>
+<tbody>
+<tr>
+<th colspan="2">` + types[i][0] + `</th>
+</tr>
+`;
+  for(var j = 0; j < events.length; j++) {
+    if(events[j][3] == types[i][1] && events[j][5]) {
+      content += `<tr>
+<td style="border-right: 0px; width: 1em;"></td>
+<td style="border-left: 0px;"><a href="./` + events[j][0] + `/">` + events[j][1] + `</td>
+</tr>
+`;
+    }
+  }
+  content += `</tbody>
+</table>
+<br>
+`;
+}
+content += `</div>`;
+</script>
+<script src="../resources/builder.js"></script>
+</html>
