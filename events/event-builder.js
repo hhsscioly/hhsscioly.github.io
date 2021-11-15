@@ -8,7 +8,6 @@ var linkNames = ["Home","Schedule","Events","Pictures"];
 var url = window.location.href;
 url = url.lastIndexOf('/') == (url.length - 1) ? url.substr(0, url.length - 1) : url.substr(0, url.lastIndexOf('/'));
 url = url.substr(url.lastIndexOf('/') + 1);
-console.log(url);
 
 //get variables for the actual page
 //events is defined in the event-list.js script which must be called before this script
