@@ -43,7 +43,8 @@ document.head.innerHTML = `
 <style>
 .calendarClass table {
   table-layout: fixed;
-  width: 100%;
+  min-width: 45em;
+  overflow-x: scroll;
 }
 .bordered {
   border: 1px solid black;
