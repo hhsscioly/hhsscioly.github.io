@@ -6,7 +6,7 @@ var linkNames = ["Home","Schedule","Events","Pictures"];
 // get event url so the name can be determined based on the name of its parent folder
 // this code is adapted from StackOverflow so it may not be most efficient for this particular situation
 var url = window.location.href;
-url = url.lastIndexOf('/') == (url.length - 1) ? url.substr(0, urll.length - 1) : url.substr(0, url.lastIndexOf('/'));
+url = url.lastIndexOf('/') == (url.length - 1) ? url.substr(0, url.length - 1) : url.substr(0, url.lastIndexOf('/'));
 url = url.substr(url.lastIndexOf('/') + 1);
 
 //get variables for the actual page
