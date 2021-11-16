@@ -5,50 +5,70 @@ document.head.innerHTML +=
 <link rel="shortcut icon" href="`+toRoot+`resources/icon.ico" type="image/x-icon">
 `;
 var body =
-`<header style="background-color: #0B1692;">
-<table width="100%">
+`<table class="hdr">
+<tbody>
 <tr>
-<td width="10%"><a href="http://www.hassk12.org" target="_blank"><img src="`+toRoot+`resources/saxons.png" style="max-height: 1000% !important"></a></td>
-<td colspan="3">
-<h1 style="color: gold;">Hastings High School<br>Science Olympiad</h1>
+<td width="25%" colspan="1">
+<a href="http://www.hassk12.org" target="_blank"><img src="`+toRoot+`resources/saxons.png" style="max-height: 1000% !important"></a>
 </td>
+<td width="75%" colspan="6"><h1 style="color: gold;">Hastings High School<br>Science Olympiad</h1></td>
 </tr>
-<tr>
-<td class="pagetitle" colspan="2" width="50%" style="vertical-align: bottom"><a>`+title+`</a></td>
-<td style="text-align: right; vertical-align: bottom" colspan="2">
-<div class="headlink" style="vertical-align: bottom">`;
-for(var x = 0; x < links.length; x++) {
-  body = body + `<a href="`+links[x]+`">`+linkNames[x]+`</a>`;
-}
-body = body + `
-</div>
-<div class="dropNav" style="vertical-align: bottom">
-<a id="dropButton" style="vertical-align: bottom">&#8801;</a>
-<div class="dropNavButton" style="vertical-align: bottom">
-<div id="dropLinks" style="vertical-align: bottom">`;
-for(var x = 0; x < links.length; x++) {
-  body = body + `<a href="`+links[x]+`">`+linkNames[x]+`</a><br>\n`;
-}
-body = body + `</div>
-</div>
-
-</div>
-</td>
+<tr class="links">
+<td width="25%" class="pageName"></td>
+<td width="15%"></td>
+<td width="15%" class="link"></td>
+<td width="15%" class="link"></td>
+<td width="15%" class="link"></td>
+<td width="15%" colspan="2" class="link"></td>
 </tr>
+<tr class="dropRow" style="background-color: #0B1692; color: white;">
+<td width="25%" class="pageName"></td>
+<td width="65%" colspan="5"></td>
+<td width="10%" id="drop">&#8801;</td>
+</tr>
+<tr class="drops" style="background-color: transparent" width="25%">
+<td colspan="5"></td>
+<td colspan="2" class="drop"></td>
+</tr>
+<tr class="drops" style="background-color: transparent" width="25%">
+<td colspan="5"></td>
+<td colspan="2" class="drop"></td>
+</tr>
+<tr class="drops" style="background-color: transparent" width="25%">
+<td colspan="5"></td>
+<td colspan="2" class="drop"></td>
+</tr>
+<tr class="drops" style="background-color: transparent" width="25%">
+<td colspan="5"></td>
+<td colspan="2" class="drop"></td>
+</tr>
+</tbody>
 </table>
-</header>
-
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div style="padding: 1em;">`+content+`</div>`;
 document.body.innerHTML = body;
+var linkTds = document.getElementsByClassName("link");
+var dropTds = document.getElementsByClassName("drop");
+for(var i = 0; i < links.length; i++) {
+  var anchor = '<a href="' + links[i] + `">` + linkNames[i] + `</a>`;
+  linkTds[linkTds.length - 1 - i].innerHTML = anchor;
+  linkTds[linkTds.length - 1 - i].classList.add("linked");
+  dropTds[i].innerHTML = anchor;
+}
+var titles = document.getElementsByClassName("pageName");
+for(var i = 0; i < titles.length; i++)
+  titles[i].innerHTML = title;
+document.head.innerHTML += `
+<style id="dropsStyle">
+.drops {display: none;}
+</style>`;
 var showDropLinks = false;
-dropButton.onclick = function() {
+drop.onclick = function() {
   if(showDropLinks) {
     showDropLinks = false;
-    dropLinks.style.display = "none";
+    dropsStyle.innerHTML = '.drops {display: none}';
   } else {
     showDropLinks = true;
-    dropLinks.style.display = "inline-block";
+    dropsStyle.innerHTML = '.drops {display: table-row}';
   }
 }
