@@ -34,9 +34,10 @@ var events = [
   ["5-3-2022", "<b>States</b>", "0"],
   ["11-13-2021", "Practice 9AM-12PM", "2-0-7-0"],
   ["12-4-2021", "Practice 9AM-12PM", "0-0-0-0"],
-  ["1-8-2022", "Practice 9AM-12PM", "2-0-7-0"],
+  //["1-8-2022", "Practice 9AM-12PM", "2-0-7-0"],
   ["11-18-2021", "Practice 3PM-5PM", "0-0-0-0"],
-  ["12-2-2021", "Practice 3PM-5PM", "16-0-7-0"]
+  ["12-2-2021", "Practice 3PM-5PM", "3-0-7-0"],
+  ["1-6-2022", "Practice 3PM-5PM", "11-0-7-0"]
 ];
 
 // having old events on the calendar keeps a historical record but is definitely not a necessity. Delete if there are so many it gets confusing
