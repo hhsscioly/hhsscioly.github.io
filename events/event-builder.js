@@ -94,6 +94,7 @@ Google Drive Shared Resources
 `;
 
 document.head.innerHTML += `
+<title>` + title + ` | HHS Science Olympiad</title>
 <style>
 .listTable img {
   max-height: 80%;
