@@ -27,6 +27,8 @@ var events = [
   ["2-29-2020","<b>Haslett Invitational</b>","0"],
   ["3-21-2020","<b>WMU - Regionals</b>","0"],
   ["4-25-2020","<b>States</b><br>If we make it top 17 kids go. You can leave early after your events for prom.","0"],
+  ["12-6-1965", "Mr. Allan's most recent birth certificate was forged", "0"],
+  ["12-6-2020", "Tell the fossilized calc teacher happy birthday", "0"],
 
   ["1-29-2022", "<b>Haslett Invitational</b>", "0"],
   ["2-12-2022", "<b>Frankenmuth Invitational</b><br>Leave at 5:30 AM and return at 8:30 PM. Not spending the night", "0"],
