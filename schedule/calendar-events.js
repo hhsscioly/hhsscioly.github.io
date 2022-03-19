@@ -32,7 +32,7 @@ var events = [
 
   ["1-29-2022", "<b>Haslett Invitational</b>", "0"],
   ["2-12-2022", "<b>Frankenmuth Invitational</b><br>Leave at 5:30 AM and return at 8:30 PM. Not spending the night", "0"],
-  ["3-20-2022", "<b>Regionals at WMU</b>", "0"],
+  ["3-19-2022", "<b>Regionals at WMU</b>", "0"],
   ["5-3-2022", "<b>States</b>", "0"],
   ["11-13-2021", "Practice 9AM-12PM", "2-0-7-0"],
   ["12-4-2021", "Practice 9AM-12PM", "0-0-0-0"],
